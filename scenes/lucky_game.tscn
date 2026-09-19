@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfesvdaxfgg2e"]
+
+[ext_resource type="Script" uid="uid://h2lir64siuk6" path="res://scripts/lucky_game.gd" id="1_ohyw3"]
+[ext_resource type="PackedScene" uid="uid://1wc2lg86rby7" path="res://scenes/zodiac_character.tscn" id="5_4k8mp"]
+[ext_resource type="Texture2D" uid="uid://lwtjcat3s3uh" path="res://assets/sprites/1.png" id="5_speyy"]
+[ext_resource type="Texture2D" uid="uid://d0cuw1w2s56g" path="res://assets/sprites/2.png" id="6_if447"]
+[ext_resource type="PackedScene" uid="uid://brm7t7rshwq6j" path="res://scenes/coin.tscn" id="6_speyy"]
+[ext_resource type="Texture2D" uid="uid://c1wsbrsafas2r" path="res://assets/sprites/4.png" id="7_7n70m"]
+[ext_resource type="PackedScene" uid="uid://b10dmcmbfxxj2" path="res://scenes/health.tscn" id="7_speyy"]
+[ext_resource type="PackedScene" uid="uid://dy6f5rtiq2sfl" path="res://scenes/pause_menu.tscn" id="8_if447"]
+[ext_resource type="PackedScene" uid="uid://dlofp2rlj4nh" path="res://scenes/capsule_machine.tscn" id="9_7n70m"]
+[ext_resource type="AudioStream" uid="uid://desfwwkk5rm8t" path="res://assets/sounds/Tales From The Vienna Woods.mp3" id="10_7idrn"]
+[ext_resource type="PackedScene" uid="uid://cp6yveq8lh5t3" path="res://scenes/progress_bar.tscn" id="11_6ucop"]
+[ext_resource type="PackedScene" uid="uid://b1je4divdahhb" path="res://scenes/bomb.tscn" id="12_vt156"]
+[ext_resource type="Script" uid="uid://c26wj72l0k2eh" path="res://scripts/bomb_spawner.gd" id="13_p7sat"]
+
+[sub_resource type="Gradient" id="Gradient_ohyw3"]
+offsets = PackedFloat32Array(0.057142857, 0.47936508, 0.96825397)
+colors = PackedColorArray(0.8820727, 0.5038204, 0.70640373, 1, 0.90764445, 0.45308828, 0.43295237, 1, 0.55551887, 0.568077, 0.88960236, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d6ohk"]
+gradient = SubResource("Gradient_ohyw3")
+
+[node name="LuckyGame" type="Node2D"]
+script = ExtResource("1_ohyw3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1160.0
+offset_bottom = 657.0
+texture = SubResource("GradientTexture2D_d6ohk")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+modulate = Color(0.6745098, 0.5058824, 0.78039217, 0.6784314)
+self_modulate = Color(2.1746643, 1.7022512, 1.4536129, 0.76862746)
+offset_left = -100.0
+offset_top = -81.0
+offset_right = 1218.0
+offset_bottom = 951.0
+texture = ExtResource("5_speyy")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.3518572, 0.2187677, 0.6607576, 1)
+self_modulate = Color(0.39854044, 0.380093, 0.39212647, 0.60784316)
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 1194.0
+offset_bottom = 765.0
+texture = ExtResource("6_if447")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.31842667, 0.29409024, 0.4942928, 1)
+self_modulate = Color(2.1746643, 1.7022512, 1.4536129, 0.76862746)
+offset_left = 2.0
+offset_top = -20.0
+offset_right = 1198.0
+offset_bottom = 766.0
+texture = ExtResource("7_7n70m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ZodiacCharacter" parent="." instance=ExtResource("5_4k8mp")]
+position = Vector2(508, 472)
+scale = Vector2(0.76, 0.76)
+
+[node name="Coin" parent="." instance=ExtResource("6_speyy")]
+position = Vector2(249, -31.999985)
+scale = Vector2(4.735, 4.735)
+
+[node name="Health" parent="." instance=ExtResource("7_speyy")]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 22.0
+offset_bottom = 20.0
+
+[node name="Pause_Menu" parent="." instance=ExtResource("8_if447")]
+visible = false
+
+[node name="Capsule_Machine" parent="." instance=ExtResource("9_7n70m")]
+position = Vector2(1090, 562)
+scale = Vector2(1.395, 1.395)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_7idrn")
+volume_db = -12.992
+pitch_scale = 1.5
+autoplay = true
+
+[node name="Progress_Bar" parent="." instance=ExtResource("11_6ucop")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3.0
+offset_top = 21.0
+offset_right = 3.0
+offset_bottom = 21.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BombSpawner" type="Node2D" parent="."]
+script = ExtResource("13_p7sat")
+
+[node name="Bomb" parent="." instance=ExtResource("12_vt156")]

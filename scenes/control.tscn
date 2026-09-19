@@ -1,0 +1,356 @@
+[gd_scene load_steps=26 format=3 uid="uid://cuj6uu0qo5j2y"]
+
+[ext_resource type="Script" uid="uid://cxc1avd12glct" path="res://scripts/control.gd" id="1_5p55f"]
+[ext_resource type="FontFile" uid="uid://cc3te6h8esm5j" path="res://assets/fonts/FatPix-SVG.ttf" id="2_brbbq"]
+[ext_resource type="Texture2D" uid="uid://b4q5p20l3jgwt" path="res://assets/sprites/Cloud-2.png" id="2_kql7n"]
+[ext_resource type="FontFile" uid="uid://dsbw5emppavpb" path="res://assets/fonts/PixelOperator8.ttf" id="3_8n18e"]
+[ext_resource type="Texture2D" uid="uid://cvx57gw4pnt0k" path="res://assets/sprites/Cloud-5.png" id="4_tac8f"]
+[ext_resource type="Script" uid="uid://b2hxhc1m4oxl" path="res://scripts/cloud.gd" id="5_lpubu"]
+[ext_resource type="Texture2D" uid="uid://bttgmfbti6fjp" path="res://assets/sprites/Cloud-7.png" id="5_vb5ih"]
+[ext_resource type="Texture2D" uid="uid://dir5x7svb6brd" path="res://assets/sprites/Cloud-21.png" id="6_6pn8l"]
+[ext_resource type="Texture2D" uid="uid://cnj7kkgdnyxyv" path="res://assets/sprites/Cloud-23.png" id="7_0jf8d"]
+[ext_resource type="Texture2D" uid="uid://djkmppva12g3n" path="res://assets/sprites/Cloud-31.png" id="8_apcft"]
+[ext_resource type="Texture2D" uid="uid://dg4a8x3euacul" path="res://assets/sprites/Cloud-10.png" id="9_2pn8f"]
+[ext_resource type="Texture2D" uid="uid://pn4p2yslb7lj" path="res://assets/sprites/Cloud-43.png" id="10_tfhda"]
+[ext_resource type="Script" uid="uid://vleucc43cbky" path="res://scripts/label.gd" id="12_vb5ih"]
+[ext_resource type="AudioStream" uid="uid://hqfpnyopyryj" path="res://assets/sounds/Gymnopédie No.1.ogg" id="13_tac8f"]
+
+[sub_resource type="Theme" id="Theme_5p55f"]
+
+[sub_resource type="Gradient" id="Gradient_kql7n"]
+offsets = PackedFloat32Array(0.196, 0.336, 0.541, 0.776, 1.261, 1.516, 1.856, 1.881, 1.896, 1.906, 1.911)
+colors = PackedColorArray(0.9600659, 0.78548384, 1, 1, 0.9451936, 0.7657783, 0.9886188, 1, 0.95583266, 0.6636532, 0.93679625, 1, 0.92686754, 0.62372965, 0.9445918, 1, 0.75150985, 0.38390288, 0.9299784, 1, 0.9342446, 0.84996146, 0.9892258, 1, 0.8520061, 0.50590265, 0.943217, 1, 0.87265474, 0.61095184, 0.9068336, 1, 0.75959414, 0.43129927, 0.9410418, 1, 0.8832595, 0.6323653, 0.9218997, 1, 0.79576427, 0.3958889, 0.8075014, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tac8f"]
+gradient = SubResource("Gradient_kql7n")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_tjwpk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpubu"]
+bg_color = Color(0.8634541, 0.72973347, 0.6256658, 1)
+border_width_left = 45
+border_width_top = 15
+border_width_right = 35
+border_width_bottom = 40
+border_color = Color(0.72212577, 0.4333462, 0.42359442, 1)
+border_blend = true
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_color = Color(0.67655814, 0.40866843, 0.670695, 1)
+shadow_size = 10
+shadow_offset = Vector2(-0.205, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt2xq"]
+bg_color = Color(0.693658, 0.60955834, 0.93587947, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.84042627, 0.4277219, 0.94924384, 1)
+border_blend = true
+shadow_color = Color(0.50980395, 0.6156863, 0.98039216, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+bg_color = Color(0.94605404, 0.5049393, 0.77880514, 1)
+skew = Vector2(0.005, 0)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 35
+border_color = Color(0.85490197, 0.2509804, 0.5137255, 1)
+border_blend = true
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 20
+shadow_color = Color(0.77139866, 0.23379028, 0.7539347, 0.827451)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n18e"]
+bg_color = Color(0.9050092, 0.5023035, 0.62538624, 1)
+border_width_left = 130
+border_width_top = 15
+border_width_right = 120
+border_width_bottom = 15
+border_color = Color(0.7471954, 0.17858493, 0.43599474, 1)
+border_blend = true
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 20
+shadow_color = Color(0.23369178, 0.33650535, 0.67868406, 0.827451)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjwpk"]
+bg_color = Color(0.7970847, 0.3446427, 0.9170807, 1)
+skew = Vector2(0.005, 0)
+border_width_left = 20
+border_width_top = 40
+border_width_right = 30
+border_width_bottom = 40
+border_color = Color(0.63503027, 0.13235033, 0.36391506, 1)
+border_blend = true
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 20
+shadow_color = Color(0.16056624, 0.21503481, 0.70713276, 0.827451)
+shadow_size = 15
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_hob4j"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_01bab"]
+color = Color(0, 0, 0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p55f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1167.0
+offset_bottom = 772.0
+theme = SubResource("Theme_5p55f")
+color = Color(0.3489027, 0.77296233, 0.9799729, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1174.0
+offset_bottom = 795.0
+texture = SubResource("GradientTexture2D_tac8f")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="clouds" type="Node2D" parent="ColorRect"]
+
+[node name="cloud" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 315.0
+offset_bottom = 191.0
+texture = ExtResource("2_kql7n")
+script = ExtResource("5_lpubu")
+move_speed = 30.0
+
+[node name="cloud2" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 423.0
+offset_top = 188.0
+offset_right = 626.0
+offset_bottom = 311.0
+texture = ExtResource("4_tac8f")
+script = ExtResource("5_lpubu")
+move_speed = 40.0
+
+[node name="cloud3" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.9426672, 0.7676973, 0.9605339, 1)
+offset_left = 835.0
+offset_top = 204.0
+offset_right = 1300.0
+offset_bottom = 381.0
+texture = ExtResource("5_vb5ih")
+script = ExtResource("5_lpubu")
+move_speed = 20.0
+
+[node name="cloud4" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 22.0
+offset_top = 374.0
+offset_right = 264.0
+offset_bottom = 521.0
+texture = ExtResource("6_6pn8l")
+script = ExtResource("5_lpubu")
+move_speed = 45.0
+
+[node name="cloud14" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.95190257, 0.82742494, 0.9912115, 1)
+self_modulate = Color(0.851769, 0.8517689, 0.85176885, 1)
+offset_left = 259.0
+offset_top = -3.0
+offset_right = 501.0
+offset_bottom = 144.0
+texture = ExtResource("6_6pn8l")
+script = ExtResource("5_lpubu")
+move_speed = 45.0
+
+[node name="cloud15" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.95686275, 0.90588236, 0.95686275, 1)
+offset_left = 681.0
+offset_top = 137.0
+offset_right = 923.0
+offset_bottom = 284.0
+texture = ExtResource("6_6pn8l")
+script = ExtResource("5_lpubu")
+move_speed = 45.0
+
+[node name="cloud11" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.9019608, 0.87058824, 1, 1)
+offset_left = 959.0
+offset_top = 503.0
+offset_right = 1201.0
+offset_bottom = 650.0
+texture = ExtResource("6_6pn8l")
+script = ExtResource("5_lpubu")
+move_speed = 55.0
+
+[node name="cloud5" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 1038.0
+offset_top = 1.0
+offset_right = 1280.0
+offset_bottom = 148.0
+texture = ExtResource("7_0jf8d")
+script = ExtResource("5_lpubu")
+move_speed = 28.0
+
+[node name="cloud6" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 465.0
+offset_top = -52.0
+offset_right = 861.0
+offset_bottom = 110.0
+texture = ExtResource("8_apcft")
+script = ExtResource("5_lpubu")
+move_speed = 43.0
+
+[node name="cloud7" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.93984693, 0.88221836, 0.990073, 1)
+offset_left = 314.0
+offset_top = 485.0
+offset_right = 540.0
+offset_bottom = 617.0
+texture = ExtResource("9_2pn8f")
+script = ExtResource("5_lpubu")
+move_speed = 37.0
+
+[node name="cloud8" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 666.0
+offset_top = 421.0
+offset_right = 943.0
+offset_bottom = 591.0
+texture = ExtResource("8_apcft")
+script = ExtResource("5_lpubu")
+move_speed = 23.0
+
+[node name="cloud9" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 364.0
+offset_top = 312.0
+offset_right = 606.0
+offset_bottom = 459.0
+texture = ExtResource("10_tfhda")
+script = ExtResource("5_lpubu")
+move_speed = 30.0
+
+[node name="cloud10" type="TextureRect" parent="ColorRect/clouds"]
+modulate = Color(0.9169664, 0.85068536, 0.98822445, 1)
+offset_left = 38.0
+offset_top = 211.0
+offset_right = 343.0
+offset_bottom = 348.0
+texture = ExtResource("5_vb5ih")
+script = ExtResource("5_lpubu")
+move_speed = 20.0
+
+[node name="cloud12" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 40.0
+offset_top = 549.0
+offset_right = 345.0
+offset_bottom = 686.0
+texture = ExtResource("5_vb5ih")
+script = ExtResource("5_lpubu")
+move_speed = 20.0
+
+[node name="cloud13" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 722.0
+offset_top = -20.0
+offset_right = 1027.0
+offset_bottom = 117.0
+texture = ExtResource("5_vb5ih")
+script = ExtResource("5_lpubu")
+move_speed = 33.0
+
+[node name="cloud16" type="TextureRect" parent="ColorRect/clouds"]
+offset_left = 847.0
+offset_top = 338.0
+offset_right = 1152.0
+offset_bottom = 475.0
+texture = ExtResource("5_vb5ih")
+script = ExtResource("5_lpubu")
+move_speed = 33.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 47.0
+offset_right = 1127.0
+offset_bottom = 158.0
+theme = SubResource("Theme_tjwpk")
+theme_type_variation = &"HeaderMedium"
+theme_override_colors/font_color = Color(0.9084457, 0.59122336, 0.8242545, 1)
+theme_override_colors/font_shadow_color = Color(0.5101156, 0.39765736, 0.15911853, 1)
+theme_override_colors/font_outline_color = Color(0.6415146, 0.20654234, 0.76683635, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 11
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = -34
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpubu")
+text = "WELCOME , LITTLE FORTUNE SEEKER !"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_vb5ih")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 236.0
+offset_right = 825.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.1728327, 0.17283267, 0.17283267, 0.9882353)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8n18e")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_lt2xq")
+placeholder_text = "Enter your birth year"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 391.0
+offset_right = 779.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(0.86904895, 0.7837143, 0.972681, 1)
+theme_override_colors/font_focus_color = Color(0.86325, 0.6011597, 0.8031784, 1)
+theme_override_colors/font_pressed_color = Color(0.9549549, 0.51288307, 0.89107656, 1)
+theme_override_colors/font_hover_color = Color(0.8294279, 0.74325454, 0.3371556, 1)
+theme_override_colors/font_outline_color = Color(0.7349228, 0.14744848, 0.5475204, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_brbbq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8n18e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tjwpk")
+theme_override_styles/disabled = SubResource("StyleBoxLine_hob4j")
+theme_override_styles/focus = SubResource("StyleBoxLine_01bab")
+text = "CLAIM MY FATE"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_tac8f")
+volume_db = -6.164
+pitch_scale = 2.16
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_claim_my_fate_pressed"]

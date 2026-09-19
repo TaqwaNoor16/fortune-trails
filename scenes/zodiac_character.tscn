@@ -1,0 +1,89 @@
+[gd_scene load_steps=15 format=3 uid="uid://1wc2lg86rby7"]
+
+[ext_resource type="Script" uid="uid://drvsqem40gjk7" path="res://scripts/zodiac_character.gd" id="1_ps4j0"]
+[ext_resource type="Texture2D" uid="uid://bf18w1qr2gayw" path="res://assets/zodiac/snake.png" id="2_muakq"]
+[ext_resource type="Texture2D" uid="uid://choi1qi01rg1v" path="res://assets/zodiac/horse.png" id="2_qvgw4"]
+[ext_resource type="Texture2D" uid="uid://bt17fsiqpvqsa" path="res://assets/zodiac/bull.png" id="4_dbfv0"]
+[ext_resource type="Texture2D" uid="uid://dw3vtembg8m6o" path="res://assets/zodiac/sheep.png" id="5_ts3e6"]
+[ext_resource type="Texture2D" uid="uid://cueo5mjmuomqy" path="res://assets/zodiac/rat.png" id="6_f60qf"]
+[ext_resource type="Texture2D" uid="uid://oy5ovaghgrtp" path="res://assets/zodiac/Rabbit.png" id="7_ts3e6"]
+[ext_resource type="Texture2D" uid="uid://dv2d3iubwrdue" path="res://assets/zodiac/Tiger.png" id="8_f60qf"]
+[ext_resource type="Texture2D" uid="uid://bngn50rawbp2e" path="res://assets/zodiac/Rooster.png" id="9_cj575"]
+[ext_resource type="Texture2D" uid="uid://cgj3uxxrky1l7" path="res://assets/zodiac/Pig.png" id="10_gj827"]
+[ext_resource type="Texture2D" uid="uid://bi86qypmj7ry7" path="res://assets/zodiac/Dog.png" id="11_2g85l"]
+[ext_resource type="Texture2D" uid="uid://blgbaut0g7j1j" path="res://assets/zodiac/Monkey.png" id="12_yfuj5"]
+[ext_resource type="Texture2D" uid="uid://jn1qw102nwfx" path="res://assets/zodiac/dragon.png" id="13_gj827"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lloyr"]
+radius = 71.45
+
+[node name="ZodiacCharacter" type="CharacterBody2D"]
+script = ExtResource("1_ps4j0")
+
+[node name="Zodiac" type="Node2D" parent="."]
+scale = Vector2(1.435, 1.435)
+
+[node name="Snake" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-1, 1)
+scale = Vector2(0.222, 0.228)
+texture = ExtResource("2_muakq")
+
+[node name="Horse" type="Sprite2D" parent="Zodiac"]
+position = Vector2(7, -10)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_qvgw4")
+
+[node name="Ox" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-1.4752611, -3.484323)
+scale = Vector2(0.17626445, 0.18338531)
+texture = ExtResource("4_dbfv0")
+
+[node name="Goat" type="Sprite2D" parent="Zodiac"]
+position = Vector2(2.787455, -3.4843206)
+scale = Vector2(0.19255456, 0.1907207)
+texture = ExtResource("5_ts3e6")
+
+[node name="Rat" type="Sprite2D" parent="Zodiac"]
+position = Vector2(0.34842873, -1.0452908)
+scale = Vector2(0.18613607, 0.1769668)
+texture = ExtResource("6_f60qf")
+
+[node name="Rabbit" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-1.045303, -1.742154)
+scale = Vector2(0.19347148, 0.16963139)
+texture = ExtResource("7_ts3e6")
+
+[node name="Tiger" type="Sprite2D" parent="Zodiac"]
+position = Vector2(4.878051, -0.3484367)
+scale = Vector2(0.19988997, 0.18063453)
+texture = ExtResource("8_f60qf")
+
+[node name="Rooster" type="Sprite2D" parent="Zodiac"]
+position = Vector2(0.5226463, -4.5909324)
+scale = Vector2(0.2003484, 0.16907124)
+texture = ExtResource("9_cj575")
+
+[node name="Pig" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-4.878049, 1.3937283)
+scale = Vector2(0.16321291, 0.15496059)
+texture = ExtResource("10_gj827")
+
+[node name="Dog" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-1.7421579, -5.2264843)
+scale = Vector2(0.18246837, 0.16779757)
+texture = ExtResource("11_2g85l")
+
+[node name="Monkey" type="Sprite2D" parent="Zodiac"]
+position = Vector2(-1.9163747, 3.1358855)
+scale = Vector2(0.1719237, 0.17538843)
+texture = ExtResource("12_yfuj5")
+
+[node name="Dragon" type="Sprite2D" parent="Zodiac"]
+position = Vector2(0.8710865, -1.3937298)
+scale = Vector2(0.17925912, 0.17971762)
+texture = ExtResource("13_gj827")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.0000004, 1)
+scale = Vector2(1.45, 1.45)
+shape = SubResource("CircleShape2D_lloyr")

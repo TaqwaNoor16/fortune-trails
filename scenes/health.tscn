@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://b10dmcmbfxxj2"]
+
+[ext_resource type="Script" uid="uid://dh8mwp6n3suhf" path="res://scripts/health.gd" id="1_2rad1"]
+[ext_resource type="Texture2D" uid="uid://d2jqcoiy23irk" path="res://assets/sprites/heart_spritesheet_32x32.png" id="1_5e2k1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rad1"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58c75"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_but5r"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r330t"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcdjo"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p278q"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukqru"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv062"]
+atlas = ExtResource("1_5e2k1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g178y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rad1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58c75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_but5r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r330t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcdjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p278q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukqru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv062")
+}],
+"loop": false,
+"name": &"lose_health",
+"speed": 9.0
+}]
+
+[node name="Health" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2rad1")
+
+[node name="Hearts" type="Node2D" parent="."]
+position = Vector2(100.00001, 37)
+scale = Vector2(1.96, 1.96)
+skew = 0.20071286
+
+[node name="Heart1" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(-32, 0)
+sprite_frames = SubResource("SpriteFrames_g178y")
+autoplay = "default"
+
+[node name="Heart2" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_g178y")
+autoplay = "default"
+
+[node name="Heart3" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(32, 0)
+sprite_frames = SubResource("SpriteFrames_g178y")
+autoplay = "default"

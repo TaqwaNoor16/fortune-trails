@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp6yveq8lh5t3"]
+
+[ext_resource type="FontFile" uid="uid://dsbw5emppavpb" path="res://assets/fonts/PixelOperator8.ttf" id="1_vt3ux"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqjxn"]
+bg_color = Color(0.73242104, 0.15501729, 0.25073066, 1)
+border_width_left = 80
+border_width_right = 80
+border_color = Color(0.35991257, 4.7288463e-06, 0.2502961, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.16924527, 0.1692453, 0.16924527, 0.6)
+shadow_offset = Vector2(-0.23, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt3ux"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.2147963, 0.47399384, 0.3193068, 1)
+border_width_left = 80
+border_width_right = 80
+border_color = Color(0.39670944, 0.9214811, 0.60428816, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.16924527, 0.1692453, 0.16924527, 0.6)
+shadow_offset = Vector2(-0.23, 0)
+
+[node name="Progress_Bar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinProgress" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 14.0
+offset_right = 1137.0
+offset_bottom = 59.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wqjxn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vt3ux")
+max_value = 10.0
+step = 1.0
+show_percentage = false
+
+[node name="CoinLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 20.0
+offset_right = 658.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.7254902)
+theme_override_colors/font_outline_color = Color(0.48432887, 0.2763348, 0.63775426, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/outline_size = -55
+theme_override_fonts/font = ExtResource("1_vt3ux")
+theme_override_font_sizes/font_size = 26
+text = "0/10 Coins"

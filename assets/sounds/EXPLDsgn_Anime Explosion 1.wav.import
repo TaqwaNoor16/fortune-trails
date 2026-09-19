@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqr5edqh3rtwb"
+path="res://.godot/imported/EXPLDsgn_Anime Explosion 1.wav-91fe8138067e61dbc7f151b563975dd1.sample"
+
+[deps]
+
+source_file="res://assets/sounds/EXPLDsgn_Anime Explosion 1.wav"
+dest_files=["res://.godot/imported/EXPLDsgn_Anime Explosion 1.wav-91fe8138067e61dbc7f151b563975dd1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

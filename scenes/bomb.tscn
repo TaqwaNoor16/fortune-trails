@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1je4divdahhb"]
+
+[ext_resource type="Texture2D" uid="uid://cegqc77r6vp6h" path="res://assets/sprites/1000063885.png" id="1_apr5j"]
+[ext_resource type="Script" uid="uid://celwsuetc1idi" path="res://scripts/bomb.gd" id="1_r0wls"]
+[ext_resource type="Texture2D" uid="uid://bex0o3p77mes3" path="res://assets/sprites/1000063886.png" id="2_ugjkb"]
+[ext_resource type="Texture2D" uid="uid://7ee83rh1e03y" path="res://assets/sprites/1000063887.png" id="3_r0wls"]
+[ext_resource type="Texture2D" uid="uid://dlnx3eygdbspy" path="res://assets/sprites/1000063888.png" id="4_a3tha"]
+[ext_resource type="Texture2D" uid="uid://dwxas8u6wvr4q" path="res://assets/sprites/1000063889.png" id="5_1g03t"]
+[ext_resource type="Texture2D" uid="uid://bn4mqq100k2in" path="res://assets/sprites/1000063890.png" id="6_pmxwx"]
+[ext_resource type="Texture2D" uid="uid://citoaittiv0jh" path="res://assets/sprites/1000063884.png" id="7_3x5no"]
+[ext_resource type="AudioStream" uid="uid://dqr5edqh3rtwb" path="res://assets/sounds/EXPLDsgn_Anime Explosion 1.wav" id="9_a3tha"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vq3x"]
+animations = [{
+"frames": [{
+"duration": 0.81,
+"texture": ExtResource("1_apr5j")
+}, {
+"duration": 0.81,
+"texture": ExtResource("2_ugjkb")
+}, {
+"duration": 0.81,
+"texture": ExtResource("3_r0wls")
+}, {
+"duration": 0.81,
+"texture": ExtResource("4_a3tha")
+}, {
+"duration": 0.81,
+"texture": ExtResource("5_1g03t")
+}, {
+"duration": 0.81,
+"texture": ExtResource("6_pmxwx")
+}],
+"loop": false,
+"name": &"blast",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3x5no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_apr5j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_akjo0"]
+
+[node name="Bomb" type="Area2D" groups=["bombs"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_r0wls")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.0000019, -1.0000019)
+scale = Vector2(0.20197366, 0.18552634)
+sprite_frames = SubResource("SpriteFrames_6vq3x")
+animation = &"blast"
+autoplay = "idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 14)
+scale = Vector2(5.775, 5.775)
+shape = SubResource("CircleShape2D_akjo0")
+disabled = true
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_a3tha")
+volume_db = -6.243
+pitch_scale = 2.4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
