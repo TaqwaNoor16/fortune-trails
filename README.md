@@ -9,7 +9,7 @@ Players enter their birth year to receive their Chinese zodiac character, collec
 👉 (Play Fortune Trails on itch.io: https://tntnoor.itch.io/fortune-trails)
 
 ## ✨ Gameplay
-
+![Fortune Trails Gameplay](full%20gameplay.gif)
 
 
 ## 🌟 Features
@@ -30,4 +30,6 @@ Players enter their birth year to receive their Chinese zodiac character, collec
 
 ## 📸 Screenshots
 
-PUT SCREENSHOTS HERE
+![Fortune Trails Gameplay](gameplay.png)
+
+![Fortune Trails Main Menu](main_menu.png)
