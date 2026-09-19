@@ -22,6 +22,21 @@ Players enter their birth year to receive their Chinese zodiac character, collec
 - Random fortune system
 - Custom 2D artwork and UI
 
+## 🐲 Zodiac Characters
+
+Fortune Trails features 12 playable characters inspired by the Chinese zodiac.
+
+| | | |
+|---|---|---|
+| ![Rat](assets/zodiac/rat.png) | ![Ox](assets/zodiac/bull.png) | ![Tiger](assets/zodiac/Tiger.png) |
+| **Rat** | **Ox** | **Tiger** |
+| ![Rabbit](assets/zodiac/Rabbit.png) | ![Dragon](assets/zodiac/dragon.png) | ![Snake](assets/zodiac/snake.png) |
+| **Rabbit** | **Dragon** | **Snake** |
+| ![Horse](assets/zodiac/horse.png) | ![Goat](assets/zodiac/sheep.png) | ![Monkey](assets/zodiac/Monkey.png) |
+| **Horse** | **Goat** | **Monkey** |
+| ![Rooster](assets/zodiac/Rooster.png) | ![Dog](assets/zodiac/Dog.png) | ![Pig](assets/zodiac/Pig.png) |
+| **Rooster** | **Dog** | **Pig** |
+
 ## 🛠️ Built With
 
 - Godot
