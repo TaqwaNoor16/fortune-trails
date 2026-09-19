@@ -33,3 +33,5 @@ Players enter their birth year to receive their Chinese zodiac character, collec
 ![Fortune Trails Gameplay](gameplay.png)
 
 ![Fortune Trails Main Menu](main_menu.png)
+
+![Fortune Trails Pause Menu](pause_menu.png)
